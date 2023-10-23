@@ -1,4 +1,14 @@
 [
-    {"id": 1, "name": "Prigozhin Zhenya"},
-    {"id": 2, "name": "Zhopa Gusya"}
+    {
+        "id": 1,
+        "username": "testuser"
+    },
+    {
+        "id": 1146826021,
+        "username": "Danila",
+        "game": "rainbow_six_siege",
+        "platform": "playstation",
+        "game_poll": "Бронза Алмаз 1000",
+        "timestamp": "2023:10:24"
+    }
 ]
