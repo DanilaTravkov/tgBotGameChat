@@ -1,19 +1,14 @@
 from aiogram import types, F, Router, Bot
-from aiogram.types import Message, InlineKeyboardButton, ReplyKeyboardRemove, CallbackQuery
-from aiogram.filters import Command, CommandObject
-from aiogram import flags, html
+from aiogram.types import ReplyKeyboardRemove, CallbackQuery
+from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
-from datetime import datetime
-
-import logging
 
 import kb
-import text
-import utils
 
 from states import CallBackOnStart
 
 import json
+from datetime import datetime
 
 router = Router()
 
@@ -32,9 +27,6 @@ async def start_handler(message: types.Message, state: FSMContext):
                     break
                 else:
                     user = True
-            # except FileNotFoundError or json.decoder.JSONDecodeError:
-            #     mock_data = [{"id": 1}]
-            #     json.dump(mock_data, json_file, indent=4)
         if user:
             await state.set_state(CallBackOnStart.name)
             await message.answer("Как я могу к вам обращаться?", reply_markup=ReplyKeyboardRemove())
