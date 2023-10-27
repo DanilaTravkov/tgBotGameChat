@@ -3,14 +3,13 @@ import logging
 
 from config import config_instance
 
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
 
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.utils.chat_action import ChatActionMiddleware
 
 from handlers import router
-
 
 async def main():
     bot = Bot(token=config_instance.bot_token.get_secret_value(), parse_mode=ParseMode.HTML)
